@@ -1,9 +1,9 @@
 {
   "name": "ts-next-project",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:clsalberto/ts-next-project.git"
+    "url": "git@github.com:clsalberto/ts-next-setup-basic.git"
   },
   "private": true,
   "author": "Carlos Alberto <clsalberto@outlook.com>",
@@ -30,6 +30,8 @@
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "babel-plugin-inline-react-svg": "^1.1.1",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
@@ -52,7 +54,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "lint-staged": {
@@ -60,5 +63,10 @@
       "eslint --fix",
       "git add --all"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

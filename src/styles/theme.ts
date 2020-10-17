@@ -1,4 +1,4 @@
-const theme = {
+export default {
   name: 'PurpleLightTheme',
   fonts: {
     body: 'Mulish, sans-serif',
@@ -14,6 +14,4 @@ const theme = {
     white: '#ffffff',
     black: '#000000'
   }
-}
-
-export default theme
+} as const
