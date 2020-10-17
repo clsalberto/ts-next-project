@@ -10,8 +10,8 @@ const Home: React.FC = () => {
         <title>Homepage</title>
       </Head>
 
-      <h1>Next Project</h1>
-      <p>Structure for new web projects.</p>
+      <h1>{'<Next Setup Basic />'}</h1>
+      <p>Welcome to your new project.</p>
     </Container>
   )
 }

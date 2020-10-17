@@ -10,9 +10,9 @@ export const Container = styled.div`
   justify-content: center;
 
   h1 {
-    font-family: var('--font-heading');
+    font-family: ${({ theme }) => theme.fonts.body};
     font-size: 54px;
-    color: var('--primary-color');
+    color: ${({ theme }) => theme.fonts.body};
     margin-top: 40px;
   }
   p {
